@@ -176,26 +176,26 @@ if uploaded_file is not None:
                         np_image[y1:y2, x1:x2] = sharpened_region
                         st.write("Sharpening applied to the detected object.")
 
-        # Handle additional actions
-        if selected_action == "adjust brightness":
-            np_image = adjust_brightness(np_image)
-        elif selected_action == "adjust contrast":
-            np_image = adjust_contrast(np_image)
-        elif selected_action == "adjust saturation":
-            np_image = adjust_saturation(np_image)
-        elif selected_action == "grayscale":
-            np_image = grayscale_object(np_image)
-        elif selected_action == "apply sepia":
-            np_image = apply_sepia(np_image)
-        elif selected_action == "pixelate":
-            np_image = pixelate(np_image)
-        elif selected_action == "invert colors":
-            np_image = invert_colors(np_image)
-        elif selected_action == "rotate":
-            np_image = rotate_image(np_image)
+        else:# Handle additional actions
+            if selected_action == "adjust brightness":
+                np_image = adjust_brightness(np_image)
+            elif selected_action == "adjust contrast":
+                np_image = adjust_contrast(np_image)
+            elif selected_action == "adjust saturation":
+                np_image = adjust_saturation(np_image)
+            elif selected_action == "grayscale":
+                np_image = grayscale_object(np_image)
+            elif selected_action == "apply sepia":
+                np_image = apply_sepia(np_image)
+            elif selected_action == "pixelate":
+                np_image = pixelate(np_image)
+            elif selected_action == "invert colors":
+                np_image = invert_colors(np_image)
+            elif selected_action == "rotate":
+                np_image = rotate_image(np_image)
 
-        # Convert NumPy array back to PIL image
-        modified_image = Image.fromarray(np.uint8(np_image))
+            # Convert NumPy array back to PIL image
+            modified_image = Image.fromarray(np.uint8(np_image))
 
         # Display the modified image
-        st.image(modified_image, caption="Processed Image with Modifications", use_column_width=True)
+            st.image(modified_image, caption="Processed Image with Modifications", use_column_width=True)
