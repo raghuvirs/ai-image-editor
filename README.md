@@ -21,7 +21,7 @@ This project is an AI-powered interactive photo editor that allows users to appl
 
 1. Clone this repository:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/raghuvirs/ai-image-editor.git
    cd <repository_directory>
 2. Install required package:
     ```bash
