@@ -1,5 +1,5 @@
 # Ignore the virtual environment folder
-ai-image-generator/
+/ai-image-editor/
 
 # Python cache files
 __pycache__/
