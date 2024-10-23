@@ -1,0 +1,13 @@
+# Ignore the virtual environment folder
+ai-image-generator/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code settings folder (optional)
+.vscode/
+
+# macOS specific files
+.DS_Store
